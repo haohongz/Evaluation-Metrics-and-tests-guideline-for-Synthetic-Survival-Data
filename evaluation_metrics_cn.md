@@ -1,8 +1,8 @@
 # 合成生存数据评估指标整理
 
-**整理人:** 郝红  
+**整理人:** haohong Zheng  
 **更新时间:** 2026年4月  
-**来源:** 何教授文档 Section 1.6, SurvivalGAN论文, synthcity库
+**来源:** Section 1.6, SurvivalGAN论文, synthcity库
 
 ---
 
