@@ -12,7 +12,7 @@
 
 指标分两组。第一组是Section 1.6里的5个统计检验。这些检验原来是用来比较治疗组和对照组的生存曲线的, 我们拿来比较真实数据和合成数据。第二组是从SurvivalGAN论文和synthcity库里找到的。别人在评估合成数据的时候实际用过这些指标。有些看的是像不像(fidelity), 有些看的是能不能用(utility)。
 
-飞扬说他在写生成数据的code模板, 写好之后这些metrics可以直接接上去跑。
+有生成数据的code模板后, 这些metrics可以直接接上去跑。
 
 **依赖库:** `pip install lifelines scipy`
 
@@ -88,7 +88,7 @@ R里面加个strata()就行, 比Python方便很多。
 - **Wilcoxon (Gehan-Breslow):** g(t) = n(t), 用当时的风险人数做权重。早期人多权重大, 等于强调早期差异。
 - **Fleming-Harrington:** g(t) = S(t)^p * (1-S(t))^q, 最灵活。p大强调早期, q大强调晚期, 可以自己调。
 
-这个检验跟我们的项目比较相关。飞扬slides里提到过, 现有的fidelity指标会在early/late/crossing的时候mislead。加权log-rank就是应对这种情况的。
+这个检验跟我们的项目比较相关。slides里提到过, 现有的fidelity指标会在early/late/crossing的时候mislead。加权log-rank就是应对这种情况的。
 
 **Python (lifelines):**
 
@@ -176,7 +176,7 @@ for i in range(len(all_times) - 1):
 
 ## 第二部分: 论文和synthcity里的额外指标
 
-这些是SurvivalGAN论文和synthcity tutorial里别人实际用过的。飞扬特别说了KM divergence一定要加。
+这些是SurvivalGAN论文和synthcity tutorial里别人实际用过的。
 
 ---
 
@@ -312,4 +312,4 @@ diff = np.mean(np.abs(corr_real - corr_syn))
 
 1到6, 9, 11是fidelity指标, 看合成数据和真实数据像不像。7和8是utility指标, 看合成数据能不能用来训练模型。10是joint指标, 看整体分布像不像。
 
-飞扬slides里的核心论点是fidelity和utility可以不一致。一份合成数据可能fidelity分数很高但utility很差, 也可能反过来。所以两类指标都得有。
+slides里的核心论点是fidelity和utility可以不一致。一份合成数据可能fidelity分数很高但utility很差, 也可能反过来。所以两类指标都得有。
