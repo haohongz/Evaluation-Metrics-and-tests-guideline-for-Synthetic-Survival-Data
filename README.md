@@ -4,7 +4,7 @@ A benchmark for evaluating synthetic survival data generation methods on real EH
 
 We compare existing synthetic methods and measure whether the generated data is actually useful for downstream survival modeling tasks, not just whether it looks similar to the real data.
 
-![Pipeline Overview](pipeline_overview.png)
+![Pipeline Overview](figures/pipeline_overview.png)
 
 ## Motivation
 
