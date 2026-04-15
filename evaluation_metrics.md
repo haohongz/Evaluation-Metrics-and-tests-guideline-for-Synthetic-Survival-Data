@@ -1,6 +1,7 @@
 # Evaluation Metrics for Synthetic Survival Data
 
 **Author:** Haohong Zheng 
+
 **Last updated:** April 2026  
 **Source:** Section 1.6 of *Statistical Learning and Knowledge Distillation for Survival Analysis* ( Spring 2026), SurvivalGAN paper, and synthcity library.
 
