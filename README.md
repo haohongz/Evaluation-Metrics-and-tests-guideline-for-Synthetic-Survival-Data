@@ -44,7 +44,7 @@ Run multiple survival models on both real and synthetic data. Check if the perfo
 
 This is the core finding. Fidelity metrics and utility metrics can disagree. A method with worse fidelity can have better utility, and vice versa.
 
-![Fidelity vs Utility](idelity_vs_utility.png)
+![Fidelity vs Utility](fidelity_vs_utility.png)
 
 ## Methods
 
