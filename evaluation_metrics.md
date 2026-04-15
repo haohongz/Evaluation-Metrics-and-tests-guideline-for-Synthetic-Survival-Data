@@ -1,8 +1,8 @@
 # Evaluation Metrics for Synthetic Survival Data
 
-**Author:** Haohong  
+**Author:** Haohong Zheng 
 **Last updated:** April 2026  
-**Source:** Section 1.6 of *Statistical Learning and Knowledge Distillation for Survival Analysis* (He, Spring 2026), SurvivalGAN paper, and synthcity library.
+**Source:** Section 1.6 of *Statistical Learning and Knowledge Distillation for Survival Analysis* ( Spring 2026), SurvivalGAN paper, and synthcity library.
 
 ---
 
@@ -314,4 +314,4 @@ diff = np.mean(np.abs(corr_real - corr_syn))
 
 Metrics 1 through 6, 9, and 11 are **fidelity metrics**. They check whether the synthetic data looks like the real data. Metrics 7 and 8 are **utility metrics**. They check whether the synthetic data is useful for downstream tasks. Metric 10 is a **joint metric**. It checks the overall distribution.
 
-Feiyang's slides argue that fidelity and utility can disagree. A synthetic dataset might score well on fidelity but poorly on utility, or the other way around. That is why we need both types.
+In slides argue that fidelity and utility can disagree. A synthetic dataset might score well on fidelity but poorly on utility, or the other way around. That is why we need both types.
