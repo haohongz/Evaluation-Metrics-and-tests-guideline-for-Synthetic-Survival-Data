@@ -184,7 +184,7 @@ for i in range(len(all_times) - 1):
 
 **来源:** SurvivalGAN论文, synthcity库
 
-飞扬点名要加的。跟Lin and Xu有点像但不完全一样。synthcity里叫survival_km_distance, 算的是真实和合成数据的KM曲线之间的距离。包含三个子指标:
+跟Lin and Xu有点像但不完全一样。synthcity里叫survival_km_distance, 算的是真实和合成数据的KM曲线之间的距离。包含三个子指标:
 
 - **optimism:** 有方向的差异。合成数据偏乐观还是偏悲观。
 - **abs_optimism:** 绝对差异。不管方向, 只看差多少。
