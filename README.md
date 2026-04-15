@@ -26,25 +26,25 @@ We evaluate synthetic data under three usage scenarios. Each scenario has differ
 
 Train downstream survival models on synthetic data only. Test on held-out real data. Compare against the oracle baseline (trained on real data).
 
-![Replace Results](scenario1_replace.png)
+![Replace Results](figures/scenario1_replace.png)
 
 ### Scenario 2: Augment
 
 Subsample real data at different fractions (10%, 20%, 50%, etc.). Fill up to full size with synthetic data. Check if augmentation helps or hurts.
 
-![Augment Results](scenario2_augment.png)
+![Augment Results](figures/scenario2_augment.png)
 
 ### Scenario 3: Benchmark
 
 Run multiple survival models on both real and synthetic data. Check if the performance ranking is preserved.
 
-![Benchmark Results](scenario3_benchmark.png)
+![Benchmark Results](figures/scenario3_benchmark.png)
 
 ### Fidelity vs Utility
 
 This is the core finding. Fidelity metrics and utility metrics can disagree. A method with worse fidelity can have better utility, and vice versa.
 
-![Fidelity vs Utility](fidelity_vs_utility.png)
+![Fidelity vs Utility](figures/fidelity_vs_utility.png)
 
 ## Methods
 
