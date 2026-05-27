@@ -34,32 +34,32 @@ The key relationship connecting all four: **S(t) = exp(-Λ(t))**. Knowing any on
 
 For the discrete case: S(t) = ∏(1 - λₖ) — this product structure is exactly the foundation of the Kaplan-Meier estimator.
 
-**§1.2 Censoring** — What makes survival data unique. Some individuals leave the study before the event is observed.
+**1.2 Censoring** — What makes survival data unique. Some individuals leave the study before the event is observed.
 
 - **Observed data**: Xᵢ = min(Dᵢ, Cᵢ), δᵢ = I(Dᵢ ≤ Cᵢ)
 - **Right censoring** is the most common type (administrative end, loss to follow-up, withdrawal)
 - **Independent censoring assumption**: h(t | at risk) = h(t | at risk AND uncensored). This is the foundation of KM and Cox — and it is generally **unverifiable** from observed data.
 - **Likelihood**: L = ∏ [f(Xᵢ)]^δᵢ · [S(Xᵢ)]^(1-δᵢ). Events contribute density; censored observations contribute survival.
 
-**§1.3 Truncation** — Even more extreme than censoring: you don't even know the individual exists.
+**1.3 Truncation** — Even more extreme than censoring: you don't even know the individual exists.
 
 - **Left truncation (delayed entry)**: Individual enters observation only if they survive past a threshold. Common in registry data.
 - Left truncation + right censoring is the most common real-world structure.
 
-**§1.4 Kaplan-Meier Estimator** — The nonparametric MLE for S(t):
+**1.4 Kaplan-Meier Estimator** — The nonparametric MLE for S(t):
 
 - At each event time tₖ: dₖ events among nₖ at risk
 - **KM formula**: Ŝ(t) = ∏_{tₖ≤t} (nₖ - dₖ)/nₖ
 - **Greenwood's variance**: Var[Ŝ(t)] = Ŝ(t)² · Σ dₖ/[nₖ(nₖ-dₖ)]
 - Log-log transform CI guarantees confidence intervals stay within [0,1]
 
-**§1.5 Nelson-Aalen Estimator** — Estimates cumulative hazard Λ(t) directly:
+**1.5 Nelson-Aalen Estimator** — Estimates cumulative hazard Λ(t) directly:
 
 - Λ̂(t) = Σ dₖ/nₖ
 - Breslow estimator: S̃(t) = exp(-Λ̂(t)), approximately equals KM in large samples
 - More numerically stable than KM in small samples (summation vs multiplication)
 
-**§1.6 Comparison of Survival Curves** — Five tests for H₀: S₁(t) = S₂(t):
+**1.6 Comparison of Survival Curves** — Five tests for H₀: S₁(t) = S₂(t):
 
 | Test | Statistic | Strengths | Weaknesses |
 |------|-----------|-----------|------------|
