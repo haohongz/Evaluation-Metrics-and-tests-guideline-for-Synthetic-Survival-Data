@@ -21,7 +21,7 @@
 
 Chapter 1 of the Survival Notes introduces survival analysis under the homogeneous independent population assumption. The logical flow is:
 
-**§1.1 Failure Time Distributions** — Four equivalent ways to describe "when does an individual experience an event":
+#1.1 Failure Time Distributions** — Four equivalent ways to describe "when does an individual experience an event":
 
 | Function | Definition | Intuition |
 |----------|-----------|-----------|
